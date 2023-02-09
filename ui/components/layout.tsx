@@ -1,13 +1,17 @@
 import Header from "./header"
 import Footer from "./footer"
 import type { ReactNode } from "react"
+import TWHeader from "./twheader"
+import TWFooter from "./twfooter"
+
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <TWHeader/>
       <main>{children}</main>
-      <Footer />
+      <TWFooter/>
     </>
   )
 }

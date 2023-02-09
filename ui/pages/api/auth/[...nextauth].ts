@@ -2,7 +2,6 @@ import NextAuth, { NextAuthOptions } from "next-auth"
 import FusionAuthProvider from "next-auth/providers/fusionauth";
 
 export const authOptions: NextAuthOptions = {
-  // https://next-auth.js.org/configuration/providers/oauth
   providers: [
     /* EmailProvider({
          server: process.env.EMAIL_SERVER,
@@ -15,6 +14,9 @@ export const authOptions: NextAuthOptions = {
       issuer:  process.env.FUSIONAUTH_ISSUER,
       clientId: process.env.FUSIONAUTH_CLIENT_ID,
       clientSecret: process.env.FUSIONAUTH_SECRET,
+      // options:{
+      //   session: { strategy: "jwt" },
+      // }
     }),
   ],
   theme: {
