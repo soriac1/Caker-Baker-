@@ -7,6 +7,8 @@ This UI is created using Next-JS and Next Auth and contains a working login syst
 
 To use this ensure you have Node.JS 15 or greater installed and Docker Desktop.
 
+Create a .env file in the ui folder (at the same level as package.json and tsconfig.json) and add the variables that are sent in teams to this file and save
+
 In the terminal navigate to the UI folder and run "npm install" and then "npm run dev"
 
 The application should now be running in http://localhost:3000
