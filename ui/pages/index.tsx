@@ -1,13 +1,11 @@
 import Layout from "../components/layout"
-
-export default function IndexPage() {
+import HPcta from "@/components/homepage/cta"
+import HPfeatures from "@/components/homepage/features"
+export default function Home() {
   return (
     <Layout>
-      <h1>NextAuth.js Example</h1>
-      <p>
-        This is an example site to demonstrate how to use{" "}
-        <a href="https://next-auth.js.org">NextAuth.js</a> for authentication.
-      </p>
+      <HPcta/>
+      <HPfeatures/>
     </Layout>
   )
 }
