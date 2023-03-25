@@ -5,6 +5,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { Fragment } from "react"
 
 
+
   export default function TWHeader() {
     const session = useSession()
     const supabase = useSupabaseClient()
@@ -38,6 +39,34 @@ import { Fragment } from "react"
                 className="inline-block rounded-md border border-transparent bg-purple-900 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
               >
                 Sign in
+              </Link>
+              )}
+            {!session && (
+              <Link
+                href={`/dashboard`}
+                className="inline-block rounded-md border border-transparent bg-purple-900 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
+              >
+                Dashboard
+              </Link>
+
+              )}
+              {!session && (
+              <Link
+                href={`/completeOrder`}
+                className="inline-block rounded-md border border-transparent bg-yellow-300 py-2 px-4 text-base font-medium text-black hover:bg-opacity-75"
+              >
+                Cart
+                <span className="absolute  top-6 rounded-full bg-red-600 w-4 h-4  p-0 m-0 text-white font-mono text-sm  leading-tight text-center">0
+                </span>
+              </Link>
+
+              )}
+              {session?.user && (
+                <Link
+                href={`/dashboard`}
+                className="inline-block rounded-md border border-transparent bg-purple-900 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
+              >
+                Dashboard
               </Link>
               )}
               {session?.user && (
@@ -75,6 +104,7 @@ import { Fragment } from "react"
                 </Transition>
               </Menu>
               )}
+              
             </div>
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
