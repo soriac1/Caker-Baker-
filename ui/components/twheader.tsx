@@ -46,9 +46,24 @@ import { Fragment } from "react"
                 href={`/dashboard`}
                 className="inline-block rounded-md border border-transparent bg-purple-900 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
               >
-                Dashboard
+                Cake1
               </Link>
-
+              )}
+              {!session && (
+              <Link
+                href={`/dashboard2`}
+                className="inline-block rounded-md border border-transparent bg-purple-900 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
+              >
+                Cake2
+              </Link>
+              )}
+              {!session && (
+              <Link
+                href={`/cake3`}
+                className="inline-block rounded-md border border-transparent bg-purple-900 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
+              >
+                Cake3
+              </Link>
               )}
               {!session && (
               <Link
@@ -69,6 +84,8 @@ import { Fragment } from "react"
                 Dashboard
               </Link>
               )}
+              
+            
               {session?.user && (
               <Menu>
               <Menu.Button>
